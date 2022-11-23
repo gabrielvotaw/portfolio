@@ -7,17 +7,18 @@ body {
 }
 
 .navbar-wrapper {
-    height: 70px;
+    width: 100vw;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 14px;
     font-weight: 600;
+    z-index: 1;
 }
 
 .navbar {
-    color: white;
-    width: 725px;
+    width: 800px;
     padding: 0px 25px;
     min-width: max-content;
     display: flex;
@@ -32,95 +33,30 @@ body {
 }
 
 .navbar-links a {
+    color: #46536b;
     margin-right: 50px;
     transition: all 150ms ease;
 }
 
 .navbar-links a:hover {
-    color: rgba(255, 255, 255, 0.5);
+    color: #5134fd;
 }
 
 .portfolio-link {
-    color: rgba(255, 255, 255, 0.5) !important;
+    color: #5134fd !important;
 }
 
 .navbar-contact {
-    background-color: #0f86db;
-    color: white;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 20px;
+    background-color: white;
+    padding: 8px 10px;
+    border: 1px solid #d2d6da;
+    border-radius: 4px;
     transition: all 150ms ease;
 }
 
 .navbar-contact:hover {
-    background-color: #083b60;
+    box-shadow: 0.2px 0.2px 0.2px rgb(240, 240, 240);
     cursor: pointer;
-}
-
-.intro-background {
-    background-color: #f6f9fc;
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    z-index: -1;
-}
-
-.blob,
-.blob-two {
-    background-image: linear-gradient(45deg, #6303B1 15%, #fec157);
-    border-radius: 30% 50% 20% 40%;
-    opacity:.7;
-	position: absolute;
-    pointer-events: none;
-}
-
-.blob {
-    width: 1200px;
-	height: 1175px;
-    transform: rotate(-180deg);
-  	animation: 
-		transform 20s ease-in-out infinite both alternate,
-		movement_zero 40s ease-in-out infinite both;
-	left: -18%;
-	top: -90%;
-}
-
-.blob-two {
-    background-image: linear-gradient(45deg, #6303B1, #fec157);
-    width: 200px;
-	height: 200px;
-  	animation: 
-		transform 20s ease-in-out infinite both alternate,
-		movement_one 40s ease-in-out infinite both;
-	left: 80%;
-	top: 50%;
-}
-
-@media screen and (max-width: 1175px) {
-    .blob-two { display: none; }
-}
-
-@keyframes transform {
-    0%,
-  100% { border-radius: 33% 67% 70% 30% / 30% 30% 70% 70%; } 
-   20% { border-radius: 37% 63% 51% 49% / 37% 65% 35% 63%; } 
-   40% { border-radius: 36% 64% 64% 36% / 64% 48% 52% 36%; } 
-   60% { border-radius: 37% 63% 51% 49% / 30% 30% 70% 70%; } 
-   80% { border-radius: 40% 60% 42% 58% / 41% 51% 49% 59%; } 
-}
-
-@keyframes movement_zero {
-    0%,
-  100% { transform: none; }
-   50% { transform: rotateY(10deg) scale(1.2); }
-}
-
-@keyframes movement_one {
-    0%,
-  100% { transform: none; }
-   50% { transform: translate(50%, 20%) rotateY(10deg) scale(1.2); }
 }
 
 .col {
@@ -133,15 +69,13 @@ body {
 .intro,
 .about,
 .skills {
-    width: 725px;
+    width: 800px;
     height: max-content;
 }
 
 .intro {
-    color: white;
     padding: 75px 25px 0px 25px;
     max-height: 175px;
-    z-index: 1;
 }
 
 .pic {
@@ -151,7 +85,7 @@ body {
     border-radius: 500px;
 }
 
-@media screen and (max-width: 475px) {
+@media screen and (max-width: 490px) {
     .pic { display: none; }
     .navbar { display: none; }
 }
@@ -169,40 +103,46 @@ body {
 }
 
 .intro h4 span {
-    color: rgba(255, 255, 255, 0.5);
     font-weight: 700;
 }
 
-.fa {
-    color: rgba(255, 255, 255, 0.4);
-    margin: 5px 10px 0px 0px;
-    font-size: 20px;
-}
-
-.fa:hover {
-    color: rgba(255, 255, 255, 0.8);
-}
-
-.intro button {
-    background-color: rgba(255, 255, 255, 0.2);
-    color: white;
-    margin: 40px 0px 0px 0px; 
-    padding-bottom: 5px;
-    width: 200px;
-    height: 35px;
+.intro-touch,
+.intro-download {
+    margin: 40px 15px 0px 0px;
+    padding: 8px 10px;
     border: none;
-    border-radius: 20px;
-    font-size: 14px;
+    border-radius: 4px;
     transition: all 150ms ease;
+    font-size: 14px;
+}
+
+.intro-touch {
+    background-color: #5134fd;
+    color: white;
+}
+
+.intro-touch:hover {
+    cursor: pointer;
+}
+
+.intro-download {
+    background-color: white;
+    color: #5134fd;
+    border: 1px solid #d2d6da;
 }
 
 .fa-download {
-    color: white;
+    color: #5134fd;
+    margin: 0px 5px 0px 0px;
 }
 
-.intro button:hover {
-    background-color: rgba(255, 255, 255, 0.4);
+.intro-download:hover {
+    box-shadow: 0.2px 0.2px 0.2px rgb(240, 240, 240);
     cursor: pointer;
+}
+
+@media screen and (max-width: 520px) {
+     .intro-download { display: none; }
 }
 
 .about {
