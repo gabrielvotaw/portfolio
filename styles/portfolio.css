@@ -1,4 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,900');
+:root {
+    --black: #24292f;
+    --gray: #797370;
+    --purple: #5134fd;
+    --purple-hover: #4a30df;
+
+    --background-light: #f6f8fa;
+    --background-dark: #092540;
+}
 
 body {
     margin: 0;
@@ -7,6 +15,7 @@ body {
 }
 
 .navbar-wrapper {
+    background-color: var(--black);
     width: 100vw;
     height: 60px;
     display: flex;
@@ -14,7 +23,6 @@ body {
     align-items: center;
     font-size: 14px;
     font-weight: 600;
-    z-index: 1;
 }
 
 .navbar {
@@ -33,30 +41,34 @@ body {
 }
 
 .navbar-links a {
-    color: #46536b;
-    margin-right: 50px;
-    transition: all 150ms ease;
+    color: #f4ffff;
+    margin-right: 40px;
+    transition: all 50ms ease;
 }
 
 .navbar-links a:hover {
-    color: #5134fd;
-}
-
-.portfolio-link {
-    color: #5134fd !important;
+    color: #c2c2c2;
 }
 
 .navbar-contact {
-    background-color: white;
+    background-color: var(--purple);
+    color: white;
     padding: 8px 10px;
-    border: 1px solid #d2d6da;
+    border: none;
     border-radius: 4px;
-    transition: all 150ms ease;
+    font-size: 12px;
+    transition: all 50ms ease;
 }
 
 .navbar-contact:hover {
-    box-shadow: 0.2px 0.2px 0.2px rgb(240, 240, 240);
+    background-color: var(--purple-hover);
     cursor: pointer;
+}
+
+.intro-page {
+    background-color: var(--background-light);
+    width: 100vw;
+    height: calc(100vh - 60px);
 }
 
 .col {
@@ -74,8 +86,9 @@ body {
 }
 
 .intro {
-    padding: 75px 25px 0px 25px;
-    max-height: 175px;
+    padding-top: 5vh;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 .pic {
@@ -85,18 +98,23 @@ body {
     border-radius: 500px;
 }
 
-@media screen and (max-width: 490px) {
-    .pic { display: none; }
-    .navbar { display: none; }
+@media screen and (max-width: 675px) {
+    .pic { 
+        width: 120px;
+        height: 120px;
+        float: none 
+    }
 }
 
 .intro h1 {
+    color: var(--black);
     margin: 0;
-    font-size: 42px;
+    font-size: 45px;
     font-weight: 700;
 }
 
 .intro h4 {
+    color: var(--gray);
     margin: 0;
     font-size: 16px;
     font-weight: 400;
@@ -112,95 +130,74 @@ body {
     padding: 8px 10px;
     border: none;
     border-radius: 4px;
-    transition: all 150ms ease;
+    transition: all 50ms ease;
     font-size: 14px;
 }
 
 .intro-touch {
-    background-color: #5134fd;
+    background-color: var(--purple);
     color: white;
+    font-size: 12px;
+    transition: all 50ms ease;
 }
 
 .intro-touch:hover {
+    background-color: var(--purple-hover);
     cursor: pointer;
 }
 
 .intro-download {
     background-color: white;
-    color: #5134fd;
-    border: 1px solid #d2d6da;
+    color: var(--black);
+    border: 1px solid #dde0e2;
+    font-size: 12px;
 }
 
 .fa-download {
-    color: #5134fd;
+    color: var(--black);
     margin: 0px 5px 0px 0px;
+    transition: all 50ms ease;
 }
 
 .intro-download:hover {
-    box-shadow: 0.2px 0.2px 0.2px rgb(240, 240, 240);
+    background-color: rgb(245, 245, 245);
     cursor: pointer;
-}
-
-@media screen and (max-width: 520px) {
-     .intro-download { display: none; }
 }
 
 .about {
     padding: 100px 25px 0px 25px;
-    max-height: 200px;
 }
 
-.about h2,
-.skills h2 {
+.about h2 {
+    color: var(--black);
     margin: 0;
     font-size: 35px;
     font-weight: 600;
 }
 
 .about p {
-    font-size: 17px;
-    font-weight: 500;
+    color: var(--gray);
+    font-size: 16px;
+    font-weight: 400;
 }
 
 .about p span {
-    color: purple;
+    color: var(--purple);
     font-weight: 600;
 }
 
-.skills-background {
-    background-color: #092540;
+.skills-page {
+    background-color: var(--background-dark);
     width: 100vw;
-    height: 100vh;
-    position: absolute;
-    top: 745px;
-    z-index: -1;
+    height: 106vh;
 }
 
 .skills {
-    padding: 125px 25px 0px 25px;
+    background-color: var(--background-dark);
 }
 
-.skills h3 {
-    color: #00d4fe;
-    font-size: 28px;
-}
-
-.skills h1 {
-    color: white;
-    font-size: 34px;
-}
-
-.skills img{
-    margin: 0px 50px 25px 0px;
-    height: 75px;
-}
-
-.skills p {
-    color: white;
-}
-
-.languages p {
-    color: #a9b9c9;
-    font-size: 16px;
-    font-weight: 500;
+.experience-page {
+    background-color: var(--background-light);
+    width: 100vw;
+    height: 100vh;
 }
