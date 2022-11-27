@@ -80,6 +80,7 @@ body {
 
 .intro,
 .about,
+.why,
 .skills {
     width: 800px;
     height: max-content;
@@ -100,8 +101,8 @@ body {
 
 @media screen and (max-width: 675px) {
     .pic { 
-        width: 120px;
-        height: 120px;
+        width: 100px;
+        height: 100px;
         float: none 
     }
 }
@@ -109,14 +110,14 @@ body {
 .intro h1 {
     color: var(--black);
     margin: 0;
-    font-size: 45px;
+    font-size: 3rem;
     font-weight: 700;
 }
 
 .intro h4 {
     color: var(--gray);
     margin: 0;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
 }
 
@@ -164,26 +165,34 @@ body {
     cursor: pointer;
 }
 
-.about {
-    padding: 100px 25px 0px 25px;
+.about,
+.why {
+    padding: 0px 25px 0px 25px;
+    padding-top: 8vh;
 }
 
-.about h2 {
+.about h2,
+.why h2 {
     color: var(--black);
     margin: 0;
     font-size: 35px;
     font-weight: 600;
 }
 
-.about p {
+.about p,
+.why li {
     color: var(--gray);
-    font-size: 16px;
+    font-size: 1.1rem;
     font-weight: 400;
 }
 
 .about p span {
     color: var(--purple);
     font-weight: 600;
+}
+
+.why li {
+    margin-bottom: 15px;
 }
 
 .skills-page {
