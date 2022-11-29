@@ -4,6 +4,9 @@
     --purple: #5134fd;
     --purple-hover: #4a30df;
 
+    --text-h: #fffefa; 
+    --text-p: rgb(192, 192, 192);
+
     --background-light: #f6f8fa;
     --background-dark: #092540;
 }
@@ -65,6 +68,12 @@ body {
     margin-right: 0 !important;
 }
 
+.toggle-menu {
+    color: white;
+    display: none;
+    font-size: 20px;
+}
+
 .intro-wrapper {
     background-color: var(--black);
     width: 100vw;
@@ -72,7 +81,86 @@ body {
     padding: 30px 0px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .intro {
+    width: 1200px;
+    height: max-content;
+    padding: 0px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.intro-pic {
+    height: 350px;
+    border-radius: 5px;
+}
+
+.intro-right {
+    width: 600px;
+}
+
+.intro-right h3 {
+    color: var(--purple);
+}
+
+.intro-right h1 {
+    color: var(--text-h);
+    width: max-content;
+    position: relative;
+    font-size: 45px;
+    font-weight: 500;
+}
+
+.intro-right h1:before {
+    background-color: var(--black);
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-left: 2px solid white;
+    animation: animate 3s steps(12) infinite
+}
+
+@keyframes animate {
+    40%, 60% {
+        left: 100%;
+    }
+    100% {
+        left: 0%;
+    }
+}
+
+.intro-right p {
+    color: var(--text-p);
+}
+
+@media screen and (max-width: 550px) {
+    .navbar-links { display: none }
+    .toggle-menu { display: block }
+    .intro-right h1 { font-size: 28px }
+}
+
+@media screen and (max-width: 1150px) {
+    .intro {
+        width: 50vw; 
+        flex-direction: column; 
+    }
+
+    .intro-wrapper {
+        height: max-content;
+    }
+
+    .intro-pic {
+        height: 20vw;
+        border-radius: 200px;
+    }
+
+    .intro-right {
+        width: 60vw;
+    }
 }
