@@ -21,12 +21,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 12px;
+    font-weight: 400;
 }
 
 .navbar {
-    width: 800px;
+    width: 2050px;
     padding: 0px 25px;
     min-width: max-content;
     display: flex;
@@ -34,15 +34,26 @@ body {
     justify-content: space-between;
 }
 
-.navbar-links a,
-.navbar-contact {
-    color: inherit;
-    text-decoration: none;
+.navbar p {
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.navbar p span {
+    font-weight: 700;
+}
+
+.navbar-links {
+    display: flex;
+    align-items: center;
 }
 
 .navbar-links a {
     color: #f4ffff;
-    margin-right: 40px;
+    margin-right: 25px;
+    text-decoration: none;
     transition: all 50ms ease;
 }
 
@@ -50,163 +61,18 @@ body {
     color: #c2c2c2;
 }
 
-.navbar-contact {
-    background-color: var(--purple);
-    color: white;
-    padding: 8px 10px;
-    border: none;
-    border-radius: 4px;
-    font-size: 12px;
-    transition: all 50ms ease;
+.social-link {
+    margin-right: 0 !important;
 }
 
-.navbar-contact:hover {
-    background-color: var(--purple-hover);
-    cursor: pointer;
-}
-
-.intro-page {
-    background-color: var(--background-light);
+.intro-wrapper {
+    background-color: var(--black);
     width: 100vw;
-    height: calc(100vh - 60px);
-}
-
-.col {
-    width: 100vw;
-    height: max-content;
+    height: calc(100vh - 120px);
+    padding: 30px 0px;
     display: flex;
     justify-content: center;
 }
 
-.intro,
-.about,
-.why,
-.skills {
-    width: 800px;
-    height: max-content;
-}
-
 .intro {
-    padding-top: 5vh;
-    padding-left: 25px;
-    padding-right: 25px;
-}
-
-.pic {
-    width: 150px;
-    height: 150px;
-    float: right;
-    border-radius: 500px;
-}
-
-@media screen and (max-width: 675px) {
-    .pic { 
-        width: 100px;
-        height: 100px;
-        float: none 
-    }
-}
-
-.intro h1 {
-    color: var(--black);
-    margin: 0;
-    font-size: 3rem;
-    font-weight: 700;
-}
-
-.intro h4 {
-    color: var(--gray);
-    margin: 0;
-    font-size: 1rem;
-    font-weight: 400;
-}
-
-.intro h4 span {
-    font-weight: 700;
-}
-
-.intro-touch,
-.intro-download {
-    margin: 40px 15px 0px 0px;
-    padding: 8px 10px;
-    border: none;
-    border-radius: 4px;
-    transition: all 50ms ease;
-    font-size: 14px;
-}
-
-.intro-touch {
-    background-color: var(--purple);
-    color: white;
-    font-size: 12px;
-    transition: all 50ms ease;
-}
-
-.intro-touch:hover {
-    background-color: var(--purple-hover);
-    cursor: pointer;
-}
-
-.intro-download {
-    background-color: white;
-    color: var(--black);
-    border: 1px solid #dde0e2;
-    font-size: 12px;
-}
-
-.fa-download {
-    color: var(--black);
-    margin: 0px 5px 0px 0px;
-    transition: all 50ms ease;
-}
-
-.intro-download:hover {
-    background-color: rgb(245, 245, 245);
-    cursor: pointer;
-}
-
-.about,
-.why {
-    padding: 0px 25px 0px 25px;
-    padding-top: 8vh;
-}
-
-.about h2,
-.why h2 {
-    color: var(--black);
-    margin: 0;
-    font-size: 35px;
-    font-weight: 600;
-}
-
-.about p,
-.why li {
-    color: var(--gray);
-    font-size: 1.1rem;
-    font-weight: 400;
-}
-
-.about p span {
-    color: var(--purple);
-    font-weight: 600;
-}
-
-.why li {
-    margin-bottom: 15px;
-}
-
-.skills-page {
-    background-color: var(--background-dark);
-    width: 100vw;
-    height: 106vh;
-}
-
-.skills {
-    background-color: var(--background-dark);
-}
-
-.experience-page {
-    background-color: var(--background-light);
-    width: 100vw;
-    height: 100vh;
 }
