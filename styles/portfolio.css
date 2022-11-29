@@ -26,7 +26,7 @@ body {
 }
 
 .navbar {
-    width: 50%;
+    width: 800px;
     padding: 0px 25px;
     min-width: max-content;
     display: flex;
@@ -82,7 +82,7 @@ body {
 .about,
 .why,
 .skills {
-    width: 50%;
+    width: 800px;
     height: max-content;
 }
 
