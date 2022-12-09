@@ -32,14 +32,14 @@ body {
 
 .row-card-lg-inner {
     height: 50px;
-    margin-top: 75px;
+    margin-top: 65px;
     align-items: center;
 }
 
 .navbar-wrapper {
     background-color: var(--black);
     width: 100vw;
-    height: 60px;
+    height: 55px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -117,6 +117,38 @@ body {
     margin: 0px 0px 15px 0px;
 }
 
+.card-inner h4 {
+    color: rgba(255, 255, 255, 0.8);
+    margin: 10px 0px 0px 0px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.card-inner h3 {
+    color: #fefefe;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.card-inner h3 span {
+    color:rgba(255, 255, 255, 0.9);
+    position: absolute;
+    top: 45px;
+    right: 25px;
+    font-size: 12px;
+}
+
+.span-mod {
+    color: #f13d48 !important;
+    position: inherit !important;
+    font-size: inherit !important;
+}
+
+.span-lsu {
+    color: gold !important;
+}
+
 .card-inner h1 {
     margin: 0;
     font-size: 40px;
@@ -135,9 +167,17 @@ body {
 }
 
 .card-md {
+    position: relative;
     width: 537px;
     height: 450px;
     border: 1px solid lightgray;
+}
+
+.card-md img {
+    position: absolute;
+    left: 20%;
+    bottom: 0%;
+    height: 360px;
 }
 
 .card-lg {
@@ -168,6 +208,18 @@ body {
 
 .card-about {
     background-color: white;
+}
+
+.card-parkzen {
+    background-color: #00509d;
+}
+
+.card-ps {
+    background-color: black;
+}
+
+.card-lsu {
+    background-color: #44177d;
 }
 
 .fa {
