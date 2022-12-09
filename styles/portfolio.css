@@ -2,19 +2,38 @@
     --black: #24292f;
     --gray: #797370;
     --purple: #5134fd;
-    --purple-hover: #4a30df;
+    --purple-hover: #150e3d;
 
     --text-h: #fffefa; 
-    --text-p: rgb(192, 192, 192);
+    --text-p: #6e6e73;
 
-    --background-light: #f6f8fa;
+    --background-light: #f5f5f7;
     --background-dark: #092540;
 }
 
 body {
+    background-color: var(--background-light);
     margin: 0;
     overflow-x: hidden;
     font-family: 'Inter', sans-serif;
+}
+
+.row {
+    min-width: max-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.row-cards {
+    padding: 0px 25px;
+    width: 1100px;
+}
+
+.row-card-lg-inner {
+    height: 50px;
+    margin-top: 75px;
+    align-items: center;
 }
 
 .navbar-wrapper {
@@ -29,9 +48,8 @@ body {
 }
 
 .navbar {
-    width: 2050px;
     padding: 0px 25px;
-    min-width: max-content;
+    width: 1100px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -54,113 +72,128 @@ body {
 }
 
 .navbar-links a {
-    color: #f4ffff;
-    margin-right: 25px;
+    color: white;
+    margin-left: 25px;
     text-decoration: none;
     transition: all 50ms ease;
-}
-
-.navbar-links a:hover {
-    color: #c2c2c2;
-}
-
-.social-link {
-    margin-right: 0 !important;
-}
-
-.toggle-menu {
-    color: white;
-    display: none;
-    font-size: 20px;
-}
-
-.intro-wrapper {
-    background-color: var(--black);
-    width: 100vw;
-    height: calc(100vh - 120px);
-    padding: 30px 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.intro {
-    width: 1200px;
-    height: max-content;
-    padding: 0px 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.intro-pic {
-    height: 350px;
-    border-radius: 5px;
-}
-
-.intro-right {
-    width: 600px;
-}
-
-.intro-right h3 {
-    color: var(--purple);
-}
-
-.intro-right h1 {
-    color: var(--text-h);
-    width: max-content;
-    position: relative;
-    font-size: 45px;
+    font-size: 14px;
     font-weight: 500;
 }
 
-.intro-right h1:before {
-    background-color: var(--black);
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    border-left: 2px solid white;
-    animation: animate 3s steps(12) infinite
+.container {
+    margin: 50px 0px;
+    width: 100vw;
+    height: max-content;
+    display: flex;
+    justify-content: center;
 }
 
-@keyframes animate {
-    40%, 60% {
-        left: 100%;
-    }
-    100% {
-        left: 0%;
-    }
+.card {
+    margin: 10px 0px;
+    border: none;
+    border-radius: 25px;
+    transition: all .3s cubic-bezier(0,0,.5,1);
 }
 
-.intro-right p {
-    color: var(--text-p);
+.card:hover {
+    transform: scale(1.01);
 }
 
-@media screen and (max-width: 550px) {
-    .navbar-links { display: none }
-    .toggle-menu { display: block }
-    .intro-right h1 { font-size: 28px }
+.card-inner {
+    padding: 40px;
 }
 
-@media screen and (max-width: 1150px) {
-    .intro {
-        width: 50vw; 
-        flex-direction: column; 
-    }
+.card-inner h5 {
+    color: var(--purple);
+    margin: 0px 0px 15px 0px;
+}
 
-    .intro-wrapper {
-        height: max-content;
-    }
+.card-inner h1 {
+    margin: 0;
+    font-size: 40px;
+    font-weight: 500;
+}
 
-    .intro-pic {
-        height: 20vw;
-        border-radius: 200px;
-    }
+.card-inner p {
+    margin-top: 50px;
+    font-size: 16px;
+    font-weight: 400;
+}
 
-    .intro-right {
-        width: 60vw;
-    }
+.card-sm {
+    width: 425px;
+    height: 500px;
+}
+
+.card-md {
+    width: 537px;
+    height: 450px;
+    border: 1px solid lightgray;
+}
+
+.card-lg {
+    width: 650px;
+    height: 500px;
+}
+
+.card-lg button {
+    color: white;
+    background-color: var(--purple);
+    margin-right: 15px;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 50px;
+    transition: all 150ms ease;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.card-lg button:hover {
+    background-color: var(--purple-hover);
+}
+
+.card-lg a {
+    color: black;
+    margin-right: 20px;
+}
+
+.card-about {
+    background-color: white;
+}
+
+.fa {
+    font-size: 30px;
+    transition: all 150ms ease;
+}
+
+.fa-envelope {
+    font-size: 25px;
+}
+
+.fa-linkedin:hover {
+    color: #0a66c2;
+}
+
+.fa-envelope:hover {
+    color: #27a2e3;
+}
+
+.card-pic {
+    display: flex;
+    align-items: center;
+}
+
+.card-pic:hover {
+    transform: none;
+}
+
+.pic {
+    width: 425px;
+    height: 425px;
+    border-radius: 25px;
+    transition: all .3s cubic-bezier(0,0,.5,1);
+}
+
+.pic:hover {
+    transform: scale(1.01);
 }

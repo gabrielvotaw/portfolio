@@ -21,37 +21,49 @@
         <nav class="navbar">
             <p><span>GABRIEL</span> VOTAW</p>
             <div class="navbar-links">
-                <a href="">ABOUT</a>
-                <a href="">EXPERIENCE</a>
-                <a href="">WORK</a>
-                <a href="">CONTACT</a>
-                <a class="social-link" href="https://github.com/gabrielvotaw" target="_blank"><i class="fa fa-github" style="font-size: 25px; color: white; margin-right: 15px"></i></a>
-                <a class="social-link" href="https://www.linkedin.com/in/gabrielvotaw/" target="_blank"><i class="fa fa-linkedin" style="font-size: 20px; color: white"></i></a>
+                <a class="selected-link" href="">Portfolio</a>
+                <a href="">Dashboard</a>
             </div>
-            <i class="fa fa-bars toggle-menu"></i>
-        </nav>    
+        </nav>
     </div>
-    <div class="intro-wrapper">
-        <div class="intro">
-            <div class="intro-left">
-                <img class="intro-pic" src="./assets/profilepic.png">
-            </div>
-            <div class="intro-right">
-                <h3>ABOUT</h3>
-                <div class="writer-text-wrapper">
-                    <h1 class="writer-text"></h1>
+    <div class="container">
+        <div class="col">
+            <div class="row row-cards">
+                <div class="card card-lg card-about">
+                    <div class="card-inner">
+                        <h5>ABOUT</h5>
+                        <h1>Hello, I'm Gabriel, a software developer.</h1>
+                        <p>I am based in Baton Rouge and love creating exceptional digital experiences 
+                            and software. Currently, I am pursuing my bachelor's 
+                            degree in Computer Science (Software Engineering) at <span>Louisiana State University</span>.
+                            <br/><br/>
+                            The purpose of this site is for me to learn new web development skills and be a central place for me to 
+                            express myself, share my thoughts, and display my achievements.
+                        </p>
+                        <div class="row row-card-lg-inner">
+                            <button>Download Resume</button>
+                            <div>
+                                <a href="https://github.com/gabrielvotaw" target="_blank"><i class="fa fa-github"></i></a>
+                                <a href="https://www.linkedin.com/in/gabrielvotaw/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                                <a href="mailto:gabrielj.votaw@gmail.com"><i class="fa fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <p>I'm a software developer based in Baton Rouge who loves creating exceptional digital experiences 
-                    and software. Although most of my experience and expertise is in front-end development, I am a non-stop 
-                    learner and strive to become a versatile full-stack developer. Currently, I am pursuing my bachelor's 
-                    degree in Computer Science (Software Engineering) at <span>Louisiana State University</span>.
-                    <br/><br/>
-                    Most recently, I have been developing web apps and mobile applications with serverless providers.
-                    <br/><br/>
-                    The purpose of this site is for me to learn new web development skills and be a central place for me to 
-                    express myself, share my thoughts, and display my achievements.</p>
+                <div class="card card-sm card-pic">
+                    <img class="pic" src="./assets/profilepic.png">
+                </div>
+            </div>
+            <div class="row row-cards">
+                <div class="card card-md"></div>
+                <div class="card card-md"></div>
+            </div>
+            <div class="row row-cards">
+                <div class="card card-md"></div>
+                <div class="card card-md"></div>
             </div>
         </div>
+        
     </div>
 </body>
 </html>
