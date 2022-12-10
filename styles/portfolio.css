@@ -380,6 +380,11 @@ a {
     .img-bb {
         bottom: 15% !important;
     }
+
+    .card-xl {
+        height: max-content !important;
+        min-height: 0px;
+    }
 }
 
 @media screen and (max-width: 450px) {
