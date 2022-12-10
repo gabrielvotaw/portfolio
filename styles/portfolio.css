@@ -151,6 +151,7 @@ a {
     color: #f13d48 !important;
     position: inherit !important;
     font-size: inherit !important;
+    display: inline !important;
 }
 
 .span-lsu {
@@ -357,13 +358,62 @@ a {
         min-height: 500px;
     }
 
+    .card-inner h1 {
+        font-size: 28px;
+    }
+
+    .card-pic {
+        display: none;
+    }
+
     .pic {
-        height: 40vh;
+        display: none;
     }
 
     .card-md img {
-        left: 18vw;
+        left: 15vw;
         bottom: 15%;
-        height: 26vh;
+        min-height: 275px;
+        height: 30vw;
+    }
+
+    .img-bb {
+        bottom: 15% !important;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .card-inner h1 {
+        font-size: 20px;
+    }
+
+    .card-inner p {
+        font-size: 14px;
+        margin: 10px 0px;
+    }
+
+    .card-inner h3 span {
+        display: none;
+    }
+
+    .row-card-lg-inner {
+        margin-top: 60px;
+    }
+
+    .row-card-lg-inner a {
+        display: none;
+    }
+
+    .card-md img {
+        left: 5%;
+    }
+
+    .img-bb {
+        left: 5% !important;
+    }
+
+    .card-xl {
+        height: max-content !important;
+        min-height: 0px;
     }
 }
