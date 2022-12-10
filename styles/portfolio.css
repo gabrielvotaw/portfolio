@@ -18,6 +18,10 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
 .row {
     min-width: max-content;
     display: flex;
@@ -117,6 +121,10 @@ body {
     margin: 0px 0px 15px 0px;
 }
 
+.card-skills h5 {
+    color: #00d4ff;
+}
+
 .card-inner h4 {
     color: rgba(255, 255, 255, 0.8);
     margin: 10px 0px 0px 0px;
@@ -149,6 +157,30 @@ body {
     color: gold !important;
 }
 
+.span-bb {
+    color: #fca611 !important;
+    font-size: 30px !important;
+    font-family: "Yellowtail", sans-serif;
+    animation: flicker 1.5s infinite alternate;
+}
+
+.span-swappy {
+    color: white !important;
+    font-size: 30px !important;
+    font-family: "Lobster", cursive;
+}
+
+@keyframes flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+      text-shadow:
+        0 0 1px #fff,
+        0 0 15px #fca611;
+    }
+    20%, 24%, 55% {       
+      text-shadow: none;
+    }
+}
+
 .card-inner h1 {
     margin: 0;
     font-size: 40px;
@@ -170,7 +202,6 @@ body {
     position: relative;
     width: 537px;
     height: 450px;
-    border: 1px solid lightgray;
 }
 
 .card-md img {
@@ -178,6 +209,11 @@ body {
     left: 20%;
     bottom: 0%;
     height: 360px;
+}
+
+.img-bb {
+    left: 15% !important;
+    bottom: 5% !important;
 }
 
 .card-lg {
@@ -206,6 +242,11 @@ body {
     margin-right: 20px;
 }
 
+.card-xl {
+    width: 1100px;
+    height: 400px;
+}
+
 .card-about {
     background-color: white;
 }
@@ -220,6 +261,50 @@ body {
 
 .card-lsu {
     background-color: #44177d;
+}
+
+.card-skills {
+    color: white;
+    background-color: #0a2540;
+}
+
+.card-skills p {
+    margin: 18px 0px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.card-skills p span {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.card-bb {
+    background-color: #23212c;
+}
+
+.card-swappy {
+    background-color: #ff464b;
+}
+
+.card-contact {
+    background-color: white;
+}
+
+.card-contact p {
+    font-size: 16px;
+}
+
+.card-contact a {
+    color: var(--purple);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.card-contact i {
+    color: black;
+    font-size: 40px;
+    margin-top: 15px;
+    margin-right: 25px;
 }
 
 .fa {
@@ -257,4 +342,28 @@ body {
 
 .pic:hover {
     transform: scale(1.01);
+}
+
+@media screen and (max-width: 1160px) {
+    .row-cards {
+        width: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 75vw;
+        height: max-content;
+        min-height: 500px;
+    }
+
+    .pic {
+        height: 40vh;
+    }
+
+    .card-md img {
+        left: 18vw;
+        bottom: 15%;
+        height: 26vh;
+    }
 }
